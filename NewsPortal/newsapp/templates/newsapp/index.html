@@ -1,0 +1,15 @@
+{% extends 'newsapp/base.html' %} {% block content %}
+<h1>{{title}}</h1>
+<ul>
+  {% for p in posts %}
+  <li>
+    <h2>{{p.title}}</h2>
+    {% if p.photo %}
+    <p><img src="{{p.photo.url}}" alt="map" /></p>
+    {% endif %}
+    <p>{{p.text}}</p>
+    <hr />
+  </li>
+  {% endfor %}
+</ul>
+{% endblock %}
